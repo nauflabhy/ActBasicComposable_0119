@@ -56,7 +56,7 @@ fun TugasLoginScreen(modifier: Modifier = Modifier) {
             Text(
                 text = "Ini adalah halaman login,",
                 fontSize = 16.sp,
-                color = Color.Black
+                color = Color.White
             )
 
             Spacer(modifier = Modifier.height(40.dp)) // Jarak menuju logo UMY
