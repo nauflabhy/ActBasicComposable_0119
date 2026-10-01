@@ -80,7 +80,7 @@ fun TugasLoginScreen(modifier: Modifier = Modifier) {
             Text(
                 text = "Muhammad Naufal Abhyasa",
                 fontSize = 18.sp,
-                color = Color.Blue,
+                color = Color.White,
                 fontWeight = FontWeight.Bold
             )
 
