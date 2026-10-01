@@ -92,6 +92,17 @@ fun TugasLoginScreen(modifier: Modifier = Modifier) {
                 color = Color.Cyan,
                 fontWeight = FontWeight.Bold
             )
+            Spacer(modifier = Modifier.height(30.dp))
+
+            Image(
+                painter = painterResource(id = R.drawable.spiderman),
+                contentDescription = "",
+                contentScale = androidx.compose.ui.layout.ContentScale.Crop,
+                modifier = Modifier
+                    .size(200.dp) // Ukuran diameter lingkaran
+                    .androidx.compose.ui.draw.clip(androidx.compose.foundation.shape.CircleShape) // Memotong gambar menjadi bentuk lingkaran sempurna
+            )
+
         }
     }
 }
