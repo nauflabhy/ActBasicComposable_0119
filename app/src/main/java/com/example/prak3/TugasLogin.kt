@@ -1,6 +1,7 @@
 package com.example.prak3
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -12,6 +13,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -19,71 +21,77 @@ import androidx.compose.ui.unit.sp
 
 @Composable
 fun TugasLoginScreen(modifier: Modifier = Modifier) {
-    Column(
-        modifier = modifier
-            .fillMaxSize()
-            .padding(top = 40.dp),
-        horizontalAlignment = Alignment.CenterHorizontally
+    Box(
+        modifier = modifier.fillMaxSize(),
+        contentAlignment = Alignment.TopCenter
     ) {
+        // 1. Gambar Background
         Image(
-            painter = painterResource(id = R.drawable.bg_login), // Pastikan bg_login ada di drawable
+            painter = painterResource(id = R.drawable.bg_login),
             contentDescription = "Background Login",
-            contentScale = androidx.compose.ui.layout.ContentScale.Crop,
+            contentScale = ContentScale.Crop,
             modifier = Modifier.fillMaxSize()
         )
 
-        // Teks Judul Login
-        Text(
-            text = "Login",
-            fontSize = 32.sp,
-            color = Color.Blue,
-            fontWeight = FontWeight.Bold
-        )
+        // 2. Isi Halaman (Disusun secara vertikal dengan Column)
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(top = 40.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            // Teks Judul Login
+            Text(
+                text = "Login",
+                fontSize = 32.sp,
+                color = Color.Blue,
+                fontWeight = FontWeight.Bold
+            )
 
-        Spacer(modifier = Modifier.height(8.dp))
+            Spacer(modifier = Modifier.height(8.dp))
 
-        // Teks Deskripsi Halaman
-        Text(
-            text = "Ini adalah halaman login,",
-            fontSize = 16.sp,
-            color = Color.Black
-        )
+            // Teks Deskripsi Halaman
+            Text(
+                text = "Ini adalah halaman login,",
+                fontSize = 16.sp,
+                color = Color.Black
+            )
 
-        Spacer(modifier = Modifier.height(40.dp)) // Jarak menuju logo UMY
+            Spacer(modifier = Modifier.height(40.dp)) // Jarak menuju logo UMY
 
-        // Komponen Logo UMY (Langkah 3)
-        Image(
-            painter = painterResource(id = R.drawable.logo_umy),
-            contentDescription = "Logo UMY",
-            modifier = Modifier.size(150.dp) // Mengatur ukuran lebar & tinggi logo
-        )
+            // Komponen Logo UMY
+            Image(
+                painter = painterResource(id = R.drawable.logo_umy),
+                contentDescription = "Logo UMY",
+                modifier = Modifier.size(150.dp) // Ukuran logo
+            )
 
-        Spacer(modifier = Modifier.height(30.dp))
+            Spacer(modifier = Modifier.height(30.dp))
 
-        Text(
-            text = "Nama",
-            fontSize = 18.sp,
-            color = Color.Red,
-            fontWeight = FontWeight.Bold
-        )
+            Text(
+                text = "Nama",
+                fontSize = 18.sp,
+                color = Color.Red,
+                fontWeight = FontWeight.Bold
+            )
 
-        Spacer(modifier = Modifier.height(4.dp))
+            Spacer(modifier = Modifier.height(4.dp))
 
-        Text(
-            text = "Muhammad Naufal Abhyasa",
-            fontSize = 18.sp,
-            color = Color.Blue,
-            fontWeight = FontWeight.Bold
-        )
-        Spacer(modifier = Modifier.height(8.dp))
+            Text(
+                text = "Muhammad Naufal Abhyasa",
+                fontSize = 18.sp,
+                color = Color.Blue,
+                fontWeight = FontWeight.Bold
+            )
 
-        Text(
-            text = "20240140119",
-            fontSize = 22.sp,
-            color = Color.Black,
-            fontWeight = FontWeight.Bold
-        )
+            Spacer(modifier = Modifier.height(8.dp))
 
-
+            Text(
+                text = "20240140119",
+                fontSize = 22.sp,
+                color = Color.Black,
+                fontWeight = FontWeight.Bold
+            )
+        }
     }
 }
