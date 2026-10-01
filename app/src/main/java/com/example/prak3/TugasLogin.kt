@@ -50,5 +50,15 @@ fun TugasLoginScreen(modifier: Modifier = Modifier) {
             contentDescription = "Logo UMY",
             modifier = Modifier.size(150.dp) // Mengatur ukuran lebar & tinggi logo
         )
+
+        Spacer(modifier = Modifier.height(30.dp))
+
+        Text(
+            text = "Nama",
+            fontSize = 18.sp,
+            color = Color.Red,
+            fontWeight = FontWeight.Bold
+        )
+
     }
 }
