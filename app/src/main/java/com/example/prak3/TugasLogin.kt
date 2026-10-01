@@ -18,6 +18,8 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.ui.draw.clip
 
 @Composable
 fun TugasLoginScreen(modifier: Modifier = Modifier) {
@@ -89,18 +91,18 @@ fun TugasLoginScreen(modifier: Modifier = Modifier) {
             Text(
                 text = "20240140119",
                 fontSize = 22.sp,
-                color = Color.Cyan,
+                color = Color.White,
                 fontWeight = FontWeight.Bold
             )
             Spacer(modifier = Modifier.height(30.dp))
 
             Image(
                 painter = painterResource(id = R.drawable.spiderman),
-                contentDescription = "",
-                contentScale = androidx.compose.ui.layout.ContentScale.Crop,
+                contentDescription = null,
+                contentScale = ContentScale.Crop,
                 modifier = Modifier
-                    .size(200.dp) // Ukuran diameter lingkaran
-                    .androidx.compose.ui.draw.clip(androidx.compose.foundation.shape.CircleShape) // Memotong gambar menjadi bentuk lingkaran sempurna
+                    .size(200.dp)
+                    .clip(CircleShape)
             )
 
         }
