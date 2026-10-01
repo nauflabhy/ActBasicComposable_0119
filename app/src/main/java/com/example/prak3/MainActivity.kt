@@ -20,7 +20,7 @@ class MainActivity : ComponentActivity() {
             Prak3Theme { // <-- SESUAIKAN dengan nama tema project Anda
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     // Panggil composable layout utama dengan padding dari Scaffold
-                    TataletakBoxColumnRow(
+                    TugasLoginScreen(
                         modifier = Modifier.padding(paddingValues = innerPadding)
                     )
                 }
