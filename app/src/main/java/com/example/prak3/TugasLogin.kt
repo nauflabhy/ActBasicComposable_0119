@@ -25,6 +25,13 @@ fun TugasLoginScreen(modifier: Modifier = Modifier) {
             .padding(top = 40.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
+        Image(
+            painter = painterResource(id = R.drawable.bg_login), // Pastikan bg_login ada di drawable
+            contentDescription = "Background Login",
+            contentScale = androidx.compose.ui.layout.ContentScale.Crop,
+            modifier = Modifier.fillMaxSize()
+        )
+
         // Teks Judul Login
         Text(
             text = "Login",
