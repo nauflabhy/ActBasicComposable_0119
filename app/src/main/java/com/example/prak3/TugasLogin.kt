@@ -60,5 +60,15 @@ fun TugasLoginScreen(modifier: Modifier = Modifier) {
             fontWeight = FontWeight.Bold
         )
 
+        Spacer(modifier = Modifier.height(4.dp))
+
+        Text(
+            text = "Muhammad Naufal Abhyasa",
+            fontSize = 18.sp,
+            color = Color.Blue,
+            fontWeight = FontWeight.Bold
+        )
+
+
     }
 }
