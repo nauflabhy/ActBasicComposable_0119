@@ -46,9 +46,10 @@ fun TataLetakRow(modifier: Modifier) {
 
 @Composable
 fun TataLetakBox(modifier: Modifier) {
-    Box(modifier = modifier
-        .fillMaxHeight()
-        .fillMaxWidth(), contentAlignment = Alignment.Center
+    Box(
+        modifier = modifier
+            .fillMaxHeight()
+            .fillMaxWidth(), contentAlignment = Alignment.Center
     ) {
 
         Text(text = "Box 1")
@@ -56,5 +57,16 @@ fun TataLetakBox(modifier: Modifier) {
         Text(text = "Row 1")
         Text(text = "Box 2")
         Text(text = "Column 2")
+    }
+}
+
+@Composable
+fun TataLetakColumnRow(modifier: Modifier) {
+        Row (modifier = modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceEvenly) {
+            Text(text = "Komponen1Baris1")
+            Text(text = "Komponen2Baris1")
+            Text
+        }
     }
 }
